@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>aoaojiao-comp-oss</artifactId>
-    <description>通用OSS组件</description>
+    <description>基于S3协议的通用OSS组件</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
