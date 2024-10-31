@@ -12,10 +12,10 @@
     <artifactId>aoaojiao-component</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>aoaojiao-comp-log</module>
-        <module>aoaojiao-comp-oss</module>
-        <module>aoaojiao-comp-web</module>
-        <module>aoaojiao-comp-mybatis-plus</module>
+        <module>aoaojiao-comp-log-starter</module>
+        <module>aoaojiao-comp-oss-starter</module>
+        <module>aoaojiao-comp-web-starter</module>
+        <module>aoaojiao-comp-mybatis-plus-starter</module>
     </modules>
 
     <properties>

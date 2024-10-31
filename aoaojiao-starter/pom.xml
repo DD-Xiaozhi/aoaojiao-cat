@@ -26,12 +26,12 @@
 
         <dependency>
             <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-log</artifactId>
+            <artifactId>aoaojiao-comp-log-starter</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-web</artifactId>
+            <artifactId>aoaojiao-comp-web-starter</artifactId>
         </dependency>
     </dependencies>
 </project>

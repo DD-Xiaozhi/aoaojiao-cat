@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-mybatis-plus</artifactId>
+            <artifactId>aoaojiao-comp-mybatis-plus-starter</artifactId>
             <version>${rersion}</version>
         </dependency>
     </dependencies>

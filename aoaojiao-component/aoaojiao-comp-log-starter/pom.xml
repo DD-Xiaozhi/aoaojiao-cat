@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao-service</artifactId>
+        <artifactId>aoaojiao-component</artifactId>
         <version>${rersion}</version>
     </parent>
 
-    <artifactId>aoaojiao-sys-service</artifactId>
-    <description>Aoaojiao系统服务</description>
+    <artifactId>aoaojiao-comp-log-starter</artifactId>
+    <description>日志组件</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,13 +19,16 @@
     </properties>
 
     <dependencies>
+
         <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-common</artifactId>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-log-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
     </dependencies>
+
 </project>

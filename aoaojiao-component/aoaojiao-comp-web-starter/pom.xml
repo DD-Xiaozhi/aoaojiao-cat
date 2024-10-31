@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao-service</artifactId>
+        <artifactId>aoaojiao-component</artifactId>
         <version>${rersion}</version>
     </parent>
 
-    <artifactId>aoaojiao-sys-service</artifactId>
-    <description>Aoaojiao系统服务</description>
+    <artifactId>aoaojiao-comp-web-starter</artifactId>
+    <description>Web 相关的组件</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,14 +18,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-log-starter</artifactId>
-        </dependency>
-    </dependencies>
 </project>

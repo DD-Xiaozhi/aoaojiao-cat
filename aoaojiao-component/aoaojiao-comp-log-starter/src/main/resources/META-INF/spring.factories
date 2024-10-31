@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xiaozhi.zhh.aoaojiao.log.config.TraceLogConfiguration,\
+  com.xiaozhi.zhh.aoaojiao.log.config.WebLogConfiguration

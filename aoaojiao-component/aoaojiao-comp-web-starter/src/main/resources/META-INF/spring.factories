@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xiaozhi.zhh.aoaojiao.web.config.ObjectMapperConfiguration,\
+  com.xiaozhi.zhh.aoaojiao.web.config.WebMvcAutoConfiguration,\
+  com.xiaozhi.zhh.aoaojiao.web.config.WebMvcConfigurerAdaptor

@@ -5,27 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao-service</artifactId>
+        <artifactId>aoaojiao-component</artifactId>
         <version>${rersion}</version>
     </parent>
 
-    <artifactId>aoaojiao-sys-service</artifactId>
-    <description>Aoaojiao系统服务</description>
+    <artifactId>aoaojiao-comp-mybatis-plus-starter</artifactId>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-common</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-log-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 </project>

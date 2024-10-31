@@ -59,13 +59,13 @@
             <!-- comp start -->
             <dependency>
                 <groupId>com.xiaozhi.zhh</groupId>
-                <artifactId>aoaojiao-comp-log</artifactId>
+                <artifactId>aoaojiao-comp-log-starter</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
             <dependency>
                 <groupId>com.xiaozhi.zhh</groupId>
-                <artifactId>aoaojiao-comp-web</artifactId>
+                <artifactId>aoaojiao-comp-web-starter</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <!-- comp end -->
