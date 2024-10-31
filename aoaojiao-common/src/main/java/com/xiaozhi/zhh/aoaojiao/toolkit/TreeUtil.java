@@ -1,5 +1,7 @@
 package com.xiaozhi.zhh.aoaojiao.toolkit;
 
+import org.w3c.dom.Node;
+
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.Collectors;
@@ -13,7 +15,7 @@ import java.util.stream.Collectors;
 public class TreeUtil {
 
     /**
-     * 将list合成树
+     * 递归，将list合成树
      *
      * @param list           需要合成树的List
      * @param rootCheck      判断E中为根节点的条件，如：x->x.getPId()==-1L , x->x.getParentId()==null,x->x.getParentMenuId()==0
@@ -31,6 +33,50 @@ public class TreeUtil {
                 .collect(Collectors.toList());
     }
 
+    private static <E> List<E> makeChildren(E parent,
+                                            List<E> allData,
+                                            BiFunction<E, E, Boolean> parentCheck,
+                                            BiConsumer<E, List<E>> children) {
+        return allData.stream().filter(x -> parentCheck.apply(parent, x))
+                .peek(x -> children.accept(x, makeChildren(x, allData, parentCheck, children)))
+                .collect(Collectors.toList());
+    }
+
+
+    /**
+     * 不进行递归，使用Map合成树
+     *
+     * @param menuList       需要合成树的List
+     * @param pId            对象中的父ID字段,如:Menu:getPid
+     * @param id             对象中的id字段 ,如：Menu:getId
+     * @param rootCheck      判断E中为根节点的条件，如：x->x.getPId()==-1L , x->x.getParentId()==null,x->x.getParentMenuId()==0
+     * @param setSubChildren E中设置下级数据方法，如： Menu::setSubMenus
+     * @param <T>            ID字段类型
+     * @param <E>            泛型实体对象
+     * @return Tree
+     */
+    public static <T, E> List<E> makeTree(List<E> menuList,
+                                          Function<E, T> pId,
+                                          Function<E, T> id,
+                                          Predicate<E> rootCheck,
+                                          BiConsumer<E, List<E>> setSubChildren) {
+        HashMap<T, List<E>> parentMenuMap = new HashMap<>();
+        List<E> result = new ArrayList<>();
+
+        // 构建父子映射表
+        menuList.forEach(node -> parentMenuMap.computeIfAbsent(pId.apply(node),
+                k -> new ArrayList<>()).add(node));
+
+        // 构建树
+        menuList.forEach(node -> {
+            List<E> childrenList = parentMenuMap.get(id.apply(node));
+            setSubChildren.accept(node, childrenList != null ? childrenList : new ArrayList<>());
+            if (rootCheck.test(node)) {
+                result.add(node);
+            }
+        });
+        return result;
+    }
 
     /**
      * 将树打平成tree
@@ -90,7 +136,6 @@ public class TreeUtil {
         }
     }
 
-
     /**
      * 后序遍历
      *
@@ -129,13 +174,64 @@ public class TreeUtil {
         return tree;
     }
 
-    private static <E> List<E> makeChildren(E parent,
-                                            List<E> allData,
-                                            BiFunction<E, E, Boolean> parentCheck,
-                                            BiConsumer<E, List<E>> children) {
-        return allData.stream().filter(x -> parentCheck.apply(parent, x))
-                .peek(x -> children.accept(x, makeChildren(x, allData, parentCheck, children)))
-                .collect(Collectors.toList());
+    /**
+     * 树中过滤
+     *
+     * @param tree        需要过滤的树
+     * @param predicate   过滤条件
+     * @param getChildren 获取下级数据方法，如：MenuVo::getSubMenus
+     * @param <E>         泛型实体对象
+     * @return List<E> 过滤后的树
+     */
+    public static <E> List<E> filter(List<E> tree, Predicate<E> predicate, Function<E, List<E>> getChildren) {
+        List<E> filtered = new ArrayList<>();
+        for (E node : tree) {
+            List<E> children = getChildren.apply(node);
+            if (children != null && !children.isEmpty()) {
+                List<E> filteredChildren = filter(children, predicate, getChildren);
+                if (predicate.test(node)) {
+                    filtered.add(node);
+                    getChildren.apply(node).clear();
+                    getChildren.apply(node).addAll(filteredChildren);
+                }
+            } else if (predicate.test(node)) {
+                filtered.add(node);
+            }
+        }
+        return filtered;
     }
+
+
+    /**
+     * 树中搜索
+     *
+     * @param tree           树列表
+     * @param predicate      搜索条件
+     * @param getSubChildren 获取下级数据方法，如：MenuVo::getSubMenus
+     * @param <E>            泛型实体对象
+     * @return 返回搜索到的节点及其父级到根节点
+     */
+    public static <E> List<E> search(List<E> tree,
+                                     Predicate<E> predicate,
+                                     Function<E, List<E>> getSubChildren) {
+        Iterator<E> iterator = tree.iterator();
+        while (iterator.hasNext()) {
+            E node = iterator.next();
+            List<E> childList = getSubChildren.apply(node);
+            if (childList != null && !childList.isEmpty()) {
+                search(childList, predicate, getSubChildren);
+            }
+            if (!predicate.test(node) && (childList == null || childList.isEmpty())) {
+                iterator.remove();
+            } else {
+                getSubChildren.apply(node).clear();
+                if (childList != null) {
+                    getSubChildren.apply(node).addAll(childList);
+                }
+            }
+        }
+        return tree;
+    }
+
 }
 
