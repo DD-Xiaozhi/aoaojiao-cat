@@ -34,6 +34,7 @@
         <logstash-logback-encoder.version>7.4</logstash-logback-encoder.version>
         <mybatis-plus-boot-starter.version>3.5.8</mybatis-plus-boot-starter.version>
         <mysql.version>8.0.33</mysql.version>
+        <aws-s3.version>1.12.558</aws-s3.version>
 
         <maven-flatten.version>1.5.0</maven-flatten.version>
     </properties>
@@ -86,6 +87,12 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${aws-s3.version}</version>
             </dependency>
             <!-- other dept end -->
 
