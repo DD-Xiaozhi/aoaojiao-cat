@@ -8,29 +8,21 @@
         <artifactId>aoaojiao-cat</artifactId>
         <version>${rersion}</version>
     </parent>
+
+    <artifactId>aoaojiao-auth</artifactId>
+    <packaging>pom</packaging>
+
     <modules>
-        <module>aoaojiao-sys-service</module>
-        <module>aoaojiao-ai-service</module>
-        <module>aoaojiao-mail-service</module>
-        <module>aoaojiao-media-service</module>
-        <module>aoaojiao-auth-service</module>
+        <module>aoaojiao-auth-common</module>
+        <module>aoaojiao-auth-api</module>
+        <module>aoaojiao-auth-admin</module>
     </modules>
 
-    <artifactId>aoaojiao-service</artifactId>
-    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-dao</artifactId>
-            <version>${rersion}</version>
-        </dependency>
-    </dependencies>
 
 </project>
