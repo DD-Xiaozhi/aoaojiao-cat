@@ -17,6 +17,5 @@ public enum DeleteFlag implements EnumValue {
     DELETE(1, "删除");
 
     private final Integer code;
-
     private final String desc;
 }

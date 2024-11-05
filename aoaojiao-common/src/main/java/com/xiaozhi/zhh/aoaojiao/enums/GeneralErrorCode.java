@@ -1,7 +1,7 @@
 package com.xiaozhi.zhh.aoaojiao.enums;
 
 import com.xiaozhi.zhh.aoaojiao.constant.ErrorMsg;
-import com.xiaozhi.zhh.aoaojiao.entity.ErrorCode;
+import com.xiaozhi.zhh.aoaojiao.model.entity.ErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

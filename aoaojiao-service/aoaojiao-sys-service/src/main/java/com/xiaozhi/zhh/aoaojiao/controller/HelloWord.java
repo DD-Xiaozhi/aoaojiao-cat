@@ -1,6 +1,6 @@
 package com.xiaozhi.zhh.aoaojiao.controller;
 
-import com.xiaozhi.zhh.aoaojiao.entity.R;
+import com.xiaozhi.zhh.aoaojiao.model.entity.R;
 import com.xiaozhi.zhh.aoaojiao.enums.DeleteFlag;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

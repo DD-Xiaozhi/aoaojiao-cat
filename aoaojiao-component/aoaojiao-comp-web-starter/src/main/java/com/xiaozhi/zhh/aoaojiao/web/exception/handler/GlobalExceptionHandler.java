@@ -1,6 +1,6 @@
 package com.xiaozhi.zhh.aoaojiao.web.exception.handler;
 
-import com.xiaozhi.zhh.aoaojiao.entity.R;
+import com.xiaozhi.zhh.aoaojiao.model.entity.R;
 import com.xiaozhi.zhh.aoaojiao.enums.GeneralErrorCode;
 import com.xiaozhi.zhh.aoaojiao.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;

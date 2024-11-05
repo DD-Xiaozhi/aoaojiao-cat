@@ -1,6 +1,6 @@
 package com.xiaozhi.zhh.aoaojiao.exception;
 
-import com.xiaozhi.zhh.aoaojiao.entity.ErrorCode;
+import com.xiaozhi.zhh.aoaojiao.model.entity.ErrorCode;
 
 /**
  * 业务异常类

@@ -1,4 +1,4 @@
-package com.xiaozhi.zhh.aoaojiao.entity;
+package com.xiaozhi.zhh.aoaojiao.model.dto;
 
 import lombok.Data;
 

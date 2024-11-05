@@ -1,4 +1,4 @@
-package com.xiaozhi.zhh.aoaojiao.entity;
+package com.xiaozhi.zhh.aoaojiao.model.entity;
 
 import com.xiaozhi.zhh.aoaojiao.constant.ErrorMsg;
 import com.xiaozhi.zhh.aoaojiao.toolkit.MDCUtil;
