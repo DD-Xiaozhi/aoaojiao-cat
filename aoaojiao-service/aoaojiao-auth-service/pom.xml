@@ -5,34 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao</artifactId>
-        <version>${rersion}</version>
+        <artifactId>aoaojiao-service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>aoaojiao-starter</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>aoaojiao-api-starter</module>
-        <module>aoaojiao-admin-starter</module>
-    </modules>
+    <artifactId>aoaojiao-auth-service</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
-
         <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-log-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-web-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
+
 </project>

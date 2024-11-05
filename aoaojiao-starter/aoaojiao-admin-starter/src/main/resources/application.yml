@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: aoaojiao-o.o
+    name: aoaojiao-cat-admin
 
   profiles:
     active: dev

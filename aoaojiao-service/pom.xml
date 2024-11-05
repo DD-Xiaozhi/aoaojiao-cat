@@ -13,6 +13,7 @@
         <module>aoaojiao-ai-service</module>
         <module>aoaojiao-mail-service</module>
         <module>aoaojiao-media-service</module>
+        <module>aoaojiao-auth-service</module>
     </modules>
 
     <artifactId>aoaojiao-service</artifactId>

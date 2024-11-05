@@ -12,6 +12,12 @@ import lombok.experimental.UtilityClass;
 public class CommonConstant {
 
     /**
+     * 包扫描路径
+     */
+    public static final String APP_SCAN_PACKAGE_PATH = "com.xiaozhi.zhh.aoaojiao";
+
+
+    /**
      * 数据库常量
      */
     @UtilityClass

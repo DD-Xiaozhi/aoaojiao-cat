@@ -21,7 +21,11 @@
         <dependency>
             <groupId>com.xiaozhi.zhh</groupId>
             <artifactId>aoaojiao-comp-mybatis-plus-starter</artifactId>
-            <version>${rersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xiaozhi.zhh</groupId>
+            <artifactId>aoaojiao-common</artifactId>
         </dependency>
     </dependencies>
 

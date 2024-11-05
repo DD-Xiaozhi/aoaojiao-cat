@@ -5,17 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao</artifactId>
+        <artifactId>aoaojiao-starter</artifactId>
         <version>${rersion}</version>
     </parent>
 
-    <artifactId>aoaojiao-starter</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>aoaojiao-api-starter</module>
-        <module>aoaojiao-admin-starter</module>
-    </modules>
+    <artifactId>aoaojiao-api-starter</artifactId>
+    <description>前台启动器</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -23,16 +18,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-log-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.xiaozhi.zhh</groupId>
-            <artifactId>aoaojiao-comp-web-starter</artifactId>
-        </dependency>
-    </dependencies>
 </project>

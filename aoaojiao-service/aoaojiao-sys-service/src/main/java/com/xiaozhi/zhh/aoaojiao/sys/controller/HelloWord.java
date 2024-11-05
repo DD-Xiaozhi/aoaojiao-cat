@@ -1,4 +1,4 @@
-package com.xiaozhi.zhh.aoaojiao.controller;
+package com.xiaozhi.zhh.aoaojiao.sys.controller;
 
 import com.xiaozhi.zhh.aoaojiao.model.entity.R;
 import com.xiaozhi.zhh.aoaojiao.enums.DeleteFlag;

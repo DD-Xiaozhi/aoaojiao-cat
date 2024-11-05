@@ -3,8 +3,8 @@ package com.xiaozhi.zhh.aoaojiao.web.converter;
 import com.xiaozhi.zhh.aoaojiao.toolkit.DateFormat;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.stereotype.Component;
 
+import javax.annotation.Nonnull;
 import java.time.LocalDateTime;
 
 /**
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class LocalDateTimeConvertor implements Converter<String, LocalDateTime> {
 
     @Override
-    public LocalDateTime convert(String dateStr) {
+    public LocalDateTime convert(@Nonnull String dateStr) {
         dateStr = dateStr.trim();
         if (StringUtils.isBlank(dateStr)) return null;
 

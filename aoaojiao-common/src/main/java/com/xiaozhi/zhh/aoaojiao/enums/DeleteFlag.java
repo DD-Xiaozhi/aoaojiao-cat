@@ -11,7 +11,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum DeleteFlag implements EnumValue {
+public enum DeleteFlag implements EnumValues {
 
     NORMAL(0, "正常"),
     DELETE(1, "删除");
