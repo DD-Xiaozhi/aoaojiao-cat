@@ -18,4 +18,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xiaozhi.zhh</groupId>
+            <artifactId>aoaojiao-post-service</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -14,3 +14,8 @@ mybatis-plus:
       logic-delete-field: deleteFlag
       logic-delete-value: 1
       logic-not-delete-value: 0
+
+aoaojiao:
+  id:
+    work-id: 1
+    data-center-id: 1

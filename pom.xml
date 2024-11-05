@@ -73,6 +73,12 @@
 
             <dependency>
                 <groupId>com.xiaozhi.zhh</groupId>
+                <artifactId>aoaojiao-post-service</artifactId>
+                <version>${rersion}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xiaozhi.zhh</groupId>
                 <artifactId>aoaojiao-comp-web-starter</artifactId>
                 <version>${rersion}</version>
             </dependency>
