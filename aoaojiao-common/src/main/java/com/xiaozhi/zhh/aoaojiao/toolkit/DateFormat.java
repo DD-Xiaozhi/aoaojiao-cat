@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
 @UtilityClass
 public class DateFormat {
 
-
     public static final String YYYY_MM_PATTERN = "yyyy-MM";
     public static final String SIMPLE_TIME_PATTERN = "HH:mm:ss";
     public static final String SIMPLE_DATE_PATTERN = "yyyy-MM-dd";

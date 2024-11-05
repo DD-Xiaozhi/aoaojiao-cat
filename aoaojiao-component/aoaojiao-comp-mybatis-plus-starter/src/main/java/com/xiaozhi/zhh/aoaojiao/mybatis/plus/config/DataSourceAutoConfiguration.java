@@ -30,10 +30,12 @@ public class DataSourceAutoConfiguration {
 
     /**
      * 自定义组件生成策略 -> 使用 hutool 提供的雪花算法
+     * <p>后续可改用 Seata 改进的雪花算法<p/>
      * @return 雪花id 生成器
      */
     @Bean
     public IdentifierGenerator identifierGenerator() {
-        return entity -> IdUtil.getSnowflakeNextId();
+        return entity -> IdUtil.getSnowflake(1, 1).nextId();
     }
+
 }

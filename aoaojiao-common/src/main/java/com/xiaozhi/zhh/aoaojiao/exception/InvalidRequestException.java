@@ -4,6 +4,7 @@ import com.xiaozhi.zhh.aoaojiao.enums.GeneralErrorCode;
 
 /**
  * 无效请求异常
+ *
  * @author DD
  * date    2024/06/04 13:33
  */

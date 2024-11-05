@@ -21,7 +21,7 @@ public class ErrorMsg {
     public static final String INVALID_PARAMS = "无效参数";
     public static final String NOT_ALLOW_OPERATE = "无权限操作";
     public static final String NOT_FOUND = "Not found";
-    public static final String DATA_ERROR = "数据异常，请联系管理员";
+    public static final String DATA_ERROR = "数据异常！！！";
     public static final String NOT_REPEAT = "请勿重复提交";
 
 }
