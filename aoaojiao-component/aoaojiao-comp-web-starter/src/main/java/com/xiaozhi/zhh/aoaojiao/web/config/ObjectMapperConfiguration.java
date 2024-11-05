@@ -1,6 +1,7 @@
 package com.xiaozhi.zhh.aoaojiao.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -49,6 +50,9 @@ public class ObjectMapperConfiguration {
         sm.addSerializer(Long.class, ToStringSerializer.instance);
         sm.addSerializer(BigInteger.class, ToStringSerializer.instance);
         sm.addSerializer(BigDecimal.class, ToStringSerializer.instance);
+
+        // 序列化枚举值返回
+        omp.configure(SerializationFeature.WRITE_ENUMS_USING_TO_STRING, true);
 
         return omp.registerModules(jtm, sm);
     }

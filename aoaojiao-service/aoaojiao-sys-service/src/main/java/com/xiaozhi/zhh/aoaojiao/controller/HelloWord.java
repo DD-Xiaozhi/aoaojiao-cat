@@ -1,6 +1,7 @@
 package com.xiaozhi.zhh.aoaojiao.controller;
 
 import com.xiaozhi.zhh.aoaojiao.entity.R;
+import com.xiaozhi.zhh.aoaojiao.enums.DeleteFlag;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +19,11 @@ import java.time.LocalDateTime;
 public class HelloWord {
 
     @GetMapping
-    public LocalDateTime hello(Test test) {
-        return test.getTime();
+    public R<Test> hello() {
+        Test test = new Test();
+        test.setTime(LocalDateTime.now());
+        test.deleteFlag = DeleteFlag.DELETE;
+        return R.success(test);
     }
 
     @GetMapping("test")
@@ -31,6 +35,7 @@ public class HelloWord {
     public static class Test {
 
         private LocalDateTime time;
+        private DeleteFlag deleteFlag;
     }
 
 }

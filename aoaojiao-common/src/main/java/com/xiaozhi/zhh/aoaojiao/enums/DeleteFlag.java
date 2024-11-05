@@ -4,13 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
+ * 删除标记枚举
+ *
  * @author DD
- * date    2024/10/30 21:46
+ * date    2024/10/30 21:43
  */
 @Getter
 @AllArgsConstructor
-public enum BaseEnum implements EnumValue {
-    ;
+public enum DeleteFlag implements EnumValue {
+
+    NORMAL(0, "正常"),
+    DELETE(1, "删除");
 
     private final Integer code;
 

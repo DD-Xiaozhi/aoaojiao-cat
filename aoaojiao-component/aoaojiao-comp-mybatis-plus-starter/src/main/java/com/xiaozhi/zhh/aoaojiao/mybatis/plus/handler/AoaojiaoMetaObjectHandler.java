@@ -2,7 +2,7 @@ package com.xiaozhi.zhh.aoaojiao.mybatis.plus.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.xiaozhi.zhh.aoaojiao.constant.CommonConstant;
-import com.xiaozhi.zhh.aoaojiao.enums.DeleteFlagEnum;
+import com.xiaozhi.zhh.aoaojiao.enums.DeleteFlag;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +21,7 @@ public class AoaojiaoMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         this.strictInsertFill(metaObject, CommonConstant.DB.CREATE_TIME, LocalDateTime.class, LocalDateTime.now());
         this.strictInsertFill(metaObject, CommonConstant.DB.UPDATE_TIME, LocalDateTime.class, LocalDateTime.now());
-        this.strictInsertFill(metaObject, CommonConstant.DB.DELETE_FLAG, Integer.class, DeleteFlagEnum.DELETE.getCode());
+        this.strictInsertFill(metaObject, CommonConstant.DB.DELETE_FLAG, Integer.class, DeleteFlag.DELETE.getCode());
     }
 
     @Override

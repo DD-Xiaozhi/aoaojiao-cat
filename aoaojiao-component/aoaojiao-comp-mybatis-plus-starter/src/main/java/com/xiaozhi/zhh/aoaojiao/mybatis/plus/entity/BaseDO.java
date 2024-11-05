@@ -33,4 +33,9 @@ public class BaseDO {
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private Integer deleteFlag;
+
+    /**
+     * 操作人
+     */
+    private String opUser;
 }
