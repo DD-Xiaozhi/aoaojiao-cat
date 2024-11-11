@@ -84,9 +84,8 @@ public class SensitiveAdvice implements ResponseBodyAdvice<Object> {
      * @return 脱敏后的值
      */
     private String sensitiveOp(String value, String type) {
-        if (StringUtils.isBlank(value)) {
-            return null;
-        }
+        if (StringUtils.isBlank(value)) return null;
+
         return switch (type) {
             case "name" -> DesensitizedUtil.chineseName(value);
             case "idCard" -> DesensitizedUtil.idCardNum(value, 2, value.length() - 2);

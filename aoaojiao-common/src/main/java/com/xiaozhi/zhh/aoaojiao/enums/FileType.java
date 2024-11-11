@@ -22,7 +22,6 @@ public enum FileType {
     EXCEL("excel", ".xlsx"),
     ;
 
-
     private final String code;
     private final String suffix;
 }

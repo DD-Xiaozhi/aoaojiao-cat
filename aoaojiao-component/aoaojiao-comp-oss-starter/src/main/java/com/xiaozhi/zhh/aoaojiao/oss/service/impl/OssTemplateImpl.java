@@ -7,12 +7,10 @@ import com.xiaozhi.zhh.aoaojiao.oss.service.OssTemplate;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -29,9 +27,9 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 创建Bucket
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">...</a>
      *
      * @param bucketName bucket名称
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -43,9 +41,9 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 获取所有的 buckets
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListBuckets.html">...</a>
      *
      * @return bucket 列表
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListBuckets.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -55,9 +53,9 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 通过Bucket名称删除Bucket
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucket.html">...</a>
      *
      * @param bucketName bucket名称
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucket.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -67,12 +65,12 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 上传对象
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html">...</a>
      *
      * @param bucketName  bucket名称
      * @param objectName  文件名称
      * @param stream      文件流
      * @param contextType 文件类型
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -82,11 +80,11 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 上传对象
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html">...</a>
      *
      * @param bucketName bucket名称
      * @param objectName 文件名称
      * @param stream     文件流
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -96,11 +94,11 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 通过bucketName和objectName获取对象
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">...</a>
      *
      * @param bucketName bucket名称
      * @param objectName 文件名称
      * @return S3Object
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -110,12 +108,12 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 获取对象的url
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GeneratePresignedUrl.html">...</a>
      *
      * @param bucketName bucket名称
      * @param objectName 文件名称
      * @param expires    过期时间
      * @return 获取对象链接
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GeneratePresignedUrl.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -129,10 +127,10 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 通过bucketName和objectName删除对象
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html">...</a>
      *
      * @param bucketName bucket名称
      * @param objectName 对象名称
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html">...</a>
      */
     @Override
     @SneakyThrows
@@ -142,12 +140,12 @@ public class OssTemplateImpl implements OssTemplate {
 
     /**
      * 根据bucketName和prefix获取对象集合
-     * AmazonS3：<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjects.html">...</a>
      *
      * @param bucketName bucket名称
      * @param prefix     前缀
      * @param recursive  是否递归查询
      * @return 对象列表
+     * @see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjects.html">...</a>
      */
     @Override
     @SneakyThrows
