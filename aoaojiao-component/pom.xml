@@ -16,6 +16,7 @@
         <module>aoaojiao-comp-oss-starter</module>
         <module>aoaojiao-comp-web-starter</module>
         <module>aoaojiao-comp-mybatis-plus-starter</module>
+        <module>aoaojiao-comp-auth-starter</module>
     </modules>
 
     <properties>

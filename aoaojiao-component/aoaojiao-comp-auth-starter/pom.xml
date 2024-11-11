@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao-auth</artifactId>
-        <version>${rersion}</version>
+        <artifactId>aoaojiao-component</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>aoaojiao-auth-common</artifactId>
+    <artifactId>aoaojiao-comp-auth-starter</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

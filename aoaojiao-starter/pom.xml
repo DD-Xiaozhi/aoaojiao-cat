@@ -34,5 +34,19 @@
             <groupId>com.xiaozhi.zhh</groupId>
             <artifactId>aoaojiao-comp-web-starter</artifactId>
         </dependency>
+
+        <!-- 配置提示 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 热部署 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 </project>
