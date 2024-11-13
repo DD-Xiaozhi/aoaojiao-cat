@@ -1,4 +1,4 @@
-package com.xiaozhi.aoaojiao.zhh.portal;
+package com.xiaozhi.zhh.aoaojiao.portal;
 
 import com.xiaozhi.zhh.aoaojiao.constant.CommonConstant;
 import org.springframework.boot.SpringApplication;
