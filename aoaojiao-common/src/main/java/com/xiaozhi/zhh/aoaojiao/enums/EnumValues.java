@@ -11,11 +11,11 @@ public interface EnumValues {
     /**
      * code
      */
-    @JsonValue
     Integer getCode();
 
     /**
      * 描述
      */
+    @JsonValue
     String getDesc();
 }
