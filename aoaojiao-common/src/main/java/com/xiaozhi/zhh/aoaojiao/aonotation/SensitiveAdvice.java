@@ -43,7 +43,7 @@ public class SensitiveAdvice implements ResponseBodyAdvice<Object> {
             // 处理对象，进行脱敏操作
             handlerSensitiveFields((R<?>) body);
         }
-        return body;
+        return null;
     }
 
     /**
