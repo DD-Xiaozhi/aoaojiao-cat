@@ -37,6 +37,7 @@
         <mysql.version>8.0.33</mysql.version>
         <druid-starter.version>1.2.23</druid-starter.version>
         <aws-s3.version>1.12.558</aws-s3.version>
+        <apijson.version>7.1.7</apijson.version>
 
         <maven-flatten.version>1.5.0</maven-flatten.version>
     </properties>
@@ -53,6 +54,10 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -97,6 +102,12 @@
             </dependency>
 
             <!-- other dept start -->
+            <dependency>
+                <groupId>com.github.APIJSON</groupId>
+                <artifactId>apijson-framework</artifactId>
+                <version>${apijson.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -224,4 +235,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

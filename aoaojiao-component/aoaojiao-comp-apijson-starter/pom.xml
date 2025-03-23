@@ -5,25 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaozhi.zhh</groupId>
-        <artifactId>aoaojiao-cat</artifactId>
-        <version>${rersion}</version>
+        <artifactId>aoaojiao-component</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>aoaojiao-component</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>aoaojiao-comp-log-starter</module>
-        <module>aoaojiao-comp-oss-starter</module>
-        <module>aoaojiao-comp-web-starter</module>
-        <module>aoaojiao-comp-mybatis-plus-starter</module>
-        <module>aoaojiao-comp-auth-starter</module>
-        <module>aoaojiao-comp-apijson-starter</module>
-    </modules>
+    <artifactId>aoaojiao-comp-apijson-starter</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.APIJSON</groupId>
+            <artifactId>apijson-framework</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
