@@ -22,7 +22,7 @@ import org.springframework.web.servlet.resource.NoResourceFoundException;
 public class GlobalExceptionHandler {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(IllegalArgumentException.class)
+    @ExceptionHandler({IllegalArgumentException.class})
     public R<Void> handleIllegalArgumentException(IllegalArgumentException ex) {
         log.warn("IllegalArgument, {}", ex.getMessage());
         return R.error(GeneralErrorCode.INVALID_REQUEST.getCode(), ex.getMessage());
@@ -46,7 +46,7 @@ public class GlobalExceptionHandler {
      * 参数校验失败处理
      */
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(BindException.class)
+    @ExceptionHandler({BindException.class, IllegalArgumentException.class})
     public R<String> handleBindException(BindException ex) {
         String errorMessage = handleErrorMsg(ex.getBindingResult());
         if (log.isDebugEnabled()) {
